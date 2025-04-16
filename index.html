@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Business Opportunities</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #E1306C;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      margin: 10px 0;
+      width: 100%;
+    }
+    button {
+      background-color: #E1306C;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InstaBiz Explorer</h1>
+    <p>Explore Business Opportunities on Instagram</p>
+  </header>
+
+  <div class="container">
+    <input type="text" id="inputData" placeholder="Enter Instagram niche or username" />
+    <button onclick="analyze()">Analyze</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function analyze() {
+      const input = document.getElementById('inputData').value.trim();
+      const resultDiv = document.getElementById('result');
+
+      if (!input) {
+        resultDiv.innerHTML = '<p>Please enter a valid input.</p>';
+        return;
+      }
+
+      // Mock data for recommendations
+      resultDiv.innerHTML = `
+        <h3>Recommendations for: ${input}</h3>
+        <ul>
+          <li><strong>Target Audience:</strong> Young adults (18–34), mobile-first users.</li>
+          <li><strong>Top Niches:</strong> Beauty, Fashion, Fitness, Home Decor, Digital Products.</li>
+          <li><strong>Content Ideas:</strong> Reels, Carousel Posts, Story Polls, Hashtag Trends.</li>
+          <li><strong>Monetization:</strong> Affiliate Marketing, Sponsored Posts, Dropshipping, Selling Courses.</li>
+          <li><strong>Growth Strategy:</strong> Post daily, engage with followers, collaborate with micro-influencers.</li>
+        </ul>
+      `;
+    }
+  </script>
+</body>
+</html>
